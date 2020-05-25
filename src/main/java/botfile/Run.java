@@ -12,6 +12,7 @@ public class Run {
 	public static void Main() {
 
 		Calculator Calculator = new Calculator();
+		Dice Dice = new Dice();
 		
 		try {
 			// 프로퍼티 파일 위치
@@ -27,9 +28,10 @@ public class Run {
             props.load(new java.io.BufferedInputStream(fis));
 
 			JDA bot = JDABuilder.createDefault(props.getProperty("token"))
-					.setActivity(Activity.listening("!명령어")).build();
+					.setActivity(Activity.playing("테스트중")).build();
 			bot.awaitReady();
 			bot.addEventListener(Calculator);
+			bot.addEventListener(Dice);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
