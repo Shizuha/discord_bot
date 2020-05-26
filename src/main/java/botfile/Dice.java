@@ -23,13 +23,21 @@ public class Dice extends ListenerAdapter{
 
         if (content.startsWith("!주사위")) {
     		
-    		String[] array = content.split(" ");
+    		String[] array = content.split(" "); // 공백 잘라내기
     		
-    		int random = (int) (Math.random()*(Integer.valueOf(array[2]) - Integer.valueOf(array[1] + 1)) + Integer.valueOf(array[1]));
-    		log.info(array[0]);
-    		log.info(array[1]);
-    		log.info(array[2]);
-    		log.info(String.valueOf(random));
+    		log.info(array[0]); // !주사위 
+    		log.info(array[1]); // 첫번째 수
+    		log.info(array[2]); // 두번째 수
+    		
+    		if(Integer.valueOf(array[1]) < Integer.valueOf(array[2])) {
+	    		int random = (int) (Math.random()*(Integer.valueOf(array[2]) - Integer.valueOf(array[1]) + 1) + Integer.valueOf(array[1]));
+	    		log.info(String.valueOf(random));
+	    		event.getChannel().sendMessage("`" + event.getAuthor().getName() + "`님이 " + ":game_die:주사위를 굴려 __**" + random + "**__ 나왔습니다.").queue();
+    		} else {
+    			int random = (int) (Math.random()*(Integer.valueOf(array[1]) - Integer.valueOf(array[2]) + 1) + Integer.valueOf(array[2]));
+        		log.info(String.valueOf(random));
+        		event.getChannel().sendMessage("`" + event.getAuthor().getName() + "`님이 " + ":game_die:주사위를 굴려 __**" + random + "**__ 나왔습니다.").queue();
+    		}
     		
         }
     }
