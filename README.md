@@ -28,13 +28,14 @@
 • Back - JAVA, Gradle Project
 
 
-▷ DB 설계 화면
+▷ 계산기 기능 화면 및 코드
 
-![initial](https://user-images.githubusercontent.com/47148492/145996395-b040fb9f-c5f1-4ff8-b89f-e6a0c6e6bf4d.png)
-
+![initial](https://user-images.githubusercontent.com/47148492/146000676-0d7584aa-e070-4189-b25c-4b7580ce65c3.png)
+![initial](https://user-images.githubusercontent.com/47148492/146000727-8e40e56a-2abb-4dfd-8ed2-280f39c50477.png)
 
 ▷ 대표구현 기능 설명
 
-![initial](https://user-images.githubusercontent.com/47148492/145996525-4fed95a4-c996-443a-a912-3217b008b019.png)
+![initial](https://user-images.githubusercontent.com/47148492/146000715-4de453f6-e44d-48d3-bb1e-47854d246a0f.png)
+![initial](https://user-images.githubusercontent.com/47148492/146000739-1078391a-d819-47e7-81c9-e01bd0f27685.png)
 
 
